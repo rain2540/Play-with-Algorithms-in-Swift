@@ -31,11 +31,13 @@ struct BucketSorter {
             if maxOfNums < countOfNums {
                 // 以整型数组第 i 个元素的值与其最小值的差 作为"桶"数组的索引t
                 let t = nums[i] - ModelHelper.minOf(nums)
+                print(i, nums[i])
                 // "桶"数组第t个元素值加1
                 buckets[t] += 1
             } else {
                 // 以整型数组第 i 个元素的值 作为"桶"数组的索引t
                 let t = nums[i]
+                print(i, t)
                 // "桶"数组第t个元素值加1
                 buckets[t] += 1
             }
@@ -48,17 +50,17 @@ struct BucketSorter {
                 if maxOfNums < countOfNums {
                     // i 与整型数组最小值的和 作为结果数组元素
                     let result = i + ModelHelper.minOf(nums)
-                    //print(result)
+                    print(result)
                     // 结果数组添加元素
                     results.append(result)
                 } else {
-                    //print(i)
+                    print(i)
                     // i 作为结果数组元素 添加进结果数组
                     results.append(i)
                 }
             }
         }
-        print("buckets: \n", buckets)
+//        print("buckets: \n", buckets)
         return results
     }
 }
