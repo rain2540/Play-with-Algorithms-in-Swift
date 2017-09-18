@@ -10,10 +10,11 @@ import Foundation
 
 struct ModelHelper {
 
-    /// 获取整型数组元素个数
+    /// 本方法将获取到:
+    /// 以给定整型数组的最小值和最大值为边界 公差为 1 的等差数列构成的数组的元素个数
     ///
     /// - Parameter nums: 整型数组
-    /// - Returns: 数组元素个数
+    /// - Returns: 新数组元素个数
     static func countOf(_ nums: [Int]) -> Int {
         return max(maxOf(nums) - minOf(nums), maxOf(nums)) + 1
     }
