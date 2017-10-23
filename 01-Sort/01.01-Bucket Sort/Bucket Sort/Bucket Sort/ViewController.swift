@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Bucket Sort
 //
-//  Created by hljxmxx on 16/7/31.
-//  Copyright © 2016年 smartech. All rights reserved.
+//  Created by RAIN on 16/7/31.
+//  Copyright © 2016-2017 Smartech. All rights reserved.
 //
 
 import UIKit
