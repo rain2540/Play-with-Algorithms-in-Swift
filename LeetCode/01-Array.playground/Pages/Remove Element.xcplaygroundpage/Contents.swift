@@ -2,9 +2,9 @@ import UIKit
 
 //: ## Remove Element
 //:
-//: "Given an array and a value, remove all instances of that > value in place and return the new length.
+//: Given an array and a value, remove all instances of that > value in place and return the new length.
 //:
-//: The order of elements can be changed. It doesn't matter what you leave beyond the new length."
+//: The order of elements can be changed. It doesn't matter what you leave beyond the new length.
 
 func removeElement(in array: inout [Int], elem: Int) -> Int {
     var j = 0
