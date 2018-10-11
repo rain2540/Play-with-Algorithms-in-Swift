@@ -12,6 +12,22 @@ import Foundation
 //:
 //: Your function should return length = 2, and A is now [1,2].
 
+func removeDuplicates(in array: inout [Int]) -> Int {
+    if array.count == 0 {
+        return 0
+    }
 
+    var j = 0
+    for i in 1 ..< array.count {
+        if array[j] != array[i] {
+            array[j + 1] = array[i]
+        }
+    }
+    return j + 1
+}
+
+var array = [1, 1, 2, 3]
+removeDuplicates(in: &array)
+array
 
 //: [Next](@next)
