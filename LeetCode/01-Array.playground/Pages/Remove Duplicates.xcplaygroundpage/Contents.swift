@@ -20,14 +20,16 @@ func removeDuplicates(in array: inout [Int]) -> Int {
     var j = 0
     for i in 1 ..< array.count {
         if array[j] != array[i] {
-            array[j + 1] = array[i]
+            j += 1
+            array[j] = array[i]
         }
     }
     return j + 1
 }
 
 var array = [1, 1, 2, 3]
+print(array)
 removeDuplicates(in: &array)
-array
+print(array)
 
 //: [Next](@next)
