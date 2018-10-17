@@ -5,6 +5,10 @@ import UIKit
 //: Given an array and a value, remove all instances of that > value in place and return the new length.
 //:
 //: The order of elements can be changed. It doesn't matter what you leave beyond the new length.
+//:
+//: 给定一个数组和一个值，删除该值的所有实例并返回新的长度。
+//:
+//: 元素的顺序可以改变。你留下的索引大于新长度的元素并不重要。
 
 func removeElement(in array: inout [Int], elem: Int) -> Int {
     var j = 0
