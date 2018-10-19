@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios' display-mode='raw' executeOnSourceChanges='false'>
     <pages>
-        <page name='Untitled Page 2'/>
         <page name='Remove Element'/>
+        <page name='Remove Duplicates'/>
+        <page name='Remove Duplicates - 2'/>
     </pages>
 </playground>
