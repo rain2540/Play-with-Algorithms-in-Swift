@@ -3,6 +3,7 @@
     <pages>
         <page name='Remove Element'/>
         <page name='Remove Duplicates'/>
-        <page name='Remove Duplicates - 2'/>
+        <page name='Remove Duplicates 2'/>
+        <page name='Plus One'/>
     </pages>
 </playground>
