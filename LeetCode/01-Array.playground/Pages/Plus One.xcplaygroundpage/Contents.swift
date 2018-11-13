@@ -8,6 +8,23 @@ import Foundation
 //:
 //: The digits are stored such that the most significant digit is at the head of the list.
 
+func plusOne(digits: inout [Int]) -> [Int] {
+    var res = [Int](repeating: 0, count: digits.count)
+    var sum = 0
+    var one = 1
+    for i in (0 ..< digits.count).reversed() {
+        sum = one + digits[i]
+        one = sum / 10
+        res[i] = sum % 10
+    }
 
+    if one > 0 {
+        res.insert(one, at: res.startIndex)
+    }
+    return res
+}
+
+var array = [1, 2, 9]
+array = plusOne(digits: &array)
 
 //: [Next](@next)
