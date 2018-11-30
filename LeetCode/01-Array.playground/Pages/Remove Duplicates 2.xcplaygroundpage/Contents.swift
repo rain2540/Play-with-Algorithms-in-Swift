@@ -9,6 +9,14 @@ import Foundation
 //: For example, Given sorted array A = [1,1,1,2,2,3],
 //:
 //: Your function should return length = 5, and A is now [1,1,2,2,3].
+//:
+//: ## 从已排序的数组中删除重复项 II
+//:
+//: 跟进“删除重复项”：如果最多允许重复两次怎么办？
+//:
+//: 例如，给定排序数组A = [1,1,1,2,2,3]，
+//:
+//: 你的函数应该返回length = 5，A现在是[1,1,2,2,3]。
 
 func removeDuplicates(array: inout [Int]) -> Int {
     if array.count == 0 {
