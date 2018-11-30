@@ -5,5 +5,7 @@
         <page name='Remove Duplicates'/>
         <page name='Remove Duplicates 2'/>
         <page name='Plus One'/>
+        <page name='Pascal Triangle'/>
+        <page name='Pascal Triangle 2'/>
     </pages>
 </playground>
