@@ -7,6 +7,12 @@ import Foundation
 //: Given a non-negative number represented as an array of digits, plus one to the number.
 //:
 //: The digits are stored such that the most significant digit is at the head of the list.
+//:
+//: ## 加一
+//:
+//: 将一个非负数表示为数字数组，给这个非负数加一。
+//:
+//: 使这些数字按照最高位在列表开头的方式排序。
 
 func plusOne(digits: inout [Int]) -> [Int] {
     var res = [Int](repeating: 0, count: digits.count)
