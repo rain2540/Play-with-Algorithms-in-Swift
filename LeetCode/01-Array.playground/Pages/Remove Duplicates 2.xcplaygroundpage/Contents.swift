@@ -9,7 +9,7 @@ import Foundation
 //: For example, Given sorted array A = [1,1,1,2,2,3],
 //:
 //: Your function should return length = 5, and A is now [1,1,2,2,3].
-//:
+
 //: ## 从已排序的数组中删除重复项 II
 //:
 //: 跟进“删除重复项”：如果最多允许重复两次怎么办？
