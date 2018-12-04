@@ -28,5 +28,5 @@ let land = ["子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉"
 for loop in 0 ..< lcm(a: sky.count, b: land.count) {
     let i = loop % sky.count
     let j = loop % land.count
-    print("\(loop + 1).", sky[i] + land[j])
+    print(String(format: "%02d.", loop + 1), sky[i] + land[j])
 }
