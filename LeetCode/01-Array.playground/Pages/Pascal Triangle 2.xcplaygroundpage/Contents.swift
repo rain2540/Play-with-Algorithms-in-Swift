@@ -12,4 +12,18 @@ import Foundation
 //:
 //: 例如，给定 k = 3，返回[1,3,3,1]。
 
+func getRow(rowIndex: Int) -> [Int] {
+    var vals = Array<Int>(repeating: 1, count: rowIndex + 1)
+    for i in 0 ... rowIndex {
+        if i > 1 {
+            for j in (1 ... i - 1).reversed() {
+                vals[j] = vals[j] + vals[j - 1]
+            }
+        }
+    }
+    return vals
+}
+
+print(getRow(rowIndex: 3))
+
 //: [Next](@next)
