@@ -7,5 +7,6 @@
         <page name='Plus One'/>
         <page name='Pascal Triangle'/>
         <page name='Pascal Triangle 2'/>
+        <page name='Merge Sorted Array'/>
     </pages>
 </playground>
