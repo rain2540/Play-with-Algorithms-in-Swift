@@ -8,27 +8,27 @@ import Foundation
 //:
 //: Note: You may assume that A has enough space (size that is greater or equal to m + n) to hold additional elements from B. The number of elements initialized in A and B are m and n respectively.
 
-func merge(b: [Int], into a: inout [Int]) {
-    var i = a.count + b.count - 1
-    var j = a.count - 1
-    var k = b.count - 1
+func merge(sortedB: [Int], into sortedA: inout [Int]) {
+    var i = sortedA.count + sortedB.count - 1
+    var j = sortedA.count - 1
+    var k = sortedB.count - 1
 
-    a.append(contentsOf: b)
+    sortedA.append(contentsOf: sortedB)
 
     while i >= 0 {
         if j >= 0 && k >= 0 {
-            if a[j] > b[k] {
-                a[i] = a[j]
+            if sortedA[j] > sortedB[k] {
+                sortedA[i] = sortedA[j]
                 j -= 1
             } else {
-                a[i] = b[k]
+                sortedA[i] = sortedB[k]
                 k -= 1
             }
         } else if j >= 0 {
-            a[i] = a[j]
+            sortedA[i] = sortedA[j]
             j -= 1
         } else if k >= 0 {
-            a[i] = b[k]
+            sortedA[i] = sortedB[k]
             k -= 1
         }
         i -= 1
@@ -36,33 +36,34 @@ func merge(b: [Int], into a: inout [Int]) {
 }
 
 var a = [1, 3, 5]
-var b = [2, 4, 6]
-merge(b: b, into: &a)
+let b = [2, 4, 6]
+merge(sortedB: b, into: &a)
+print(a)
 
 
 //: Another implementation (with return value)
 
-func merged(a: [Int], b: [Int]) -> [Int] {
-    var i = a.count + b.count - 1
-    var j = a.count - 1
-    var k = b.count - 1
+func merged(sortedA: [Int], sortedB: [Int]) -> [Int] {
+    var i = sortedA.count + sortedB.count - 1
+    var j = sortedA.count - 1
+    var k = sortedB.count - 1
 
-    var res = Array<Int>(repeating: 0, count: a.count + b.count)
+    var res = Array<Int>(repeating: 0, count: sortedA.count + sortedB.count)
 
     while i >= 0 {
         if j >= 0 && k >= 0 {
-            if a[j] > b[k] {
-                res[i] = a[j]
+            if sortedA[j] > sortedB[k] {
+                res[i] = sortedA[j]
                 j -= 1
             } else {
-                res[i] = b[k]
+                res[i] = sortedB[k]
                 k -= 1
             }
         } else if j >= 0 {
-            res[i] = a[j]
+            res[i] = sortedA[j]
             j -= 1
         } else if k >= 0 {
-            res[i] = b[k]
+            res[i] = sortedB[k]
             k -= 1
         }
         i -= 1
@@ -70,6 +71,25 @@ func merged(a: [Int], b: [Int]) -> [Int] {
     return res
 }
 
-print(merged(a: a, b: b))
+let c = [1, 3, 5]
+let d = [2, 4, 6]
+print(merged(sortedA: c, sortedB: d))
+
+
+//: Update
+
+func merge(b: [Int], into a: inout [Int]) {
+    let c = b.sorted()
+    a.sort()
+
+    merge(sortedB: c, into: &a)
+}
+
+var e = [1, 5, 3]
+let f = [4, 6, 2]
+merge(b: f, into: &e)
+print(e)
+
+
 
 //: [Next](@next)
