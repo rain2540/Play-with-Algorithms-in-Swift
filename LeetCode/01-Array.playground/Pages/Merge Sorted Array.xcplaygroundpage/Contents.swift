@@ -91,5 +91,15 @@ merge(b: f, into: &e)
 print(e)
 
 
+func merged(a: [Int], b: [Int]) -> [Int] {
+    let c = a.sorted()
+    let d = b.sorted()
+
+    return merged(sortedA: c, sortedB: d)
+}
+
+let g = [1, 5, 3]
+let h = [4, 6, 2]
+print(merged(a: g, b: h))
 
 //: [Next](@next)
