@@ -3,6 +3,9 @@ import UIKit
 
 extension String {
 
+    /// App 登录版本号与服务器设置版本号比对，判断是否满足登录条件
+    /// - Parameter sdv: 服务器设置的版本号
+    /// - Returns: 检验结果
     func allowToLogin(with sdv: String) -> Bool {
         // 检验结果，默认为 false
         var res = false
