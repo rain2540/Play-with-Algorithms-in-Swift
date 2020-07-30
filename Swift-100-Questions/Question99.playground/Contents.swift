@@ -8,6 +8,14 @@
 
 import UIKit
 
+func gcd(a: Int, b: Int) -> Int {
+    var x = a, y = b
+    while y != 0 {
+        (x, y) = (y, x % y)
+    }
+    return x
+}
+
 //  循环
 func gcdLoop(a: Int, b: Int) -> Int {
     var x = a, y = b
