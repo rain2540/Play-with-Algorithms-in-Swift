@@ -32,12 +32,15 @@ extension String {
         for index in 0 ..< strings.count {
             if strings[index] < sdvs[index] {  // 同一位置，传入值小于设定值，不通过
                 res = false
+                break
             } else if strings[index] > sdvs[index] {  // 同一位置，传入值大于设定值，通过
                 res = true
+                break
             } else {  // 同一位置，值相等
                 if index == strings.count - 1 {  // 若为传入值最后一位
                     // 传入值位数小于设定值位数，不通过；否则通过
                     res = !(strings.count < sdvs.count)
+                    break
                 } else {  // 其他情况继续判断
                     continue
                 }
@@ -48,3 +51,22 @@ extension String {
 
 }
 
+
+let sv1 = "2.0.0.500"
+print("3.1.0".allowToLogin(with: sv1))
+print("3.0.1.0".allowToLogin(with: sv1))
+print("2.1.0".allowToLogin(with: sv1))
+print("2.0.0".allowToLogin(with: sv1))
+print("2.0.0.550".allowToLogin(with: sv1))
+print("2.0.0.500".allowToLogin(with: sv1))
+print("2.0.0.450".allowToLogin(with: sv1))
+
+let sv2 = "2.1"
+print("3.1.0".allowToLogin(with: sv2))
+print("3.0.1.0".allowToLogin(with: sv2))
+print("2.1.0".allowToLogin(with: sv2))
+print("2.0.0".allowToLogin(with: sv2))
+print("2.1.0.550".allowToLogin(with: sv2))
+print("2.0.0.500".allowToLogin(with: sv2))
+print("1.9".allowToLogin(with: sv2))
+print("1.9.0".allowToLogin(with: sv2))
