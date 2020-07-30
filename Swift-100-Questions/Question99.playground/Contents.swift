@@ -8,6 +8,7 @@
 
 import UIKit
 
+// 元组
 func gcd(a: Int, b: Int) -> Int {
     var x = a, y = b
     while y != 0 {
