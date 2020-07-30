@@ -9,7 +9,7 @@
 import UIKit
 
 //  循环
-func gcd(a: Int, b: Int) -> Int {
+func gcdLoop(a: Int, b: Int) -> Int {
     var x = a, y = b
     var n = x % y
     while n != 0 {
@@ -20,7 +20,7 @@ func gcd(a: Int, b: Int) -> Int {
     return y
 }
 
-gcd(a: 75, b: 100)
+gcdLoop(a: 75, b: 100)
 
 
 //  递归
