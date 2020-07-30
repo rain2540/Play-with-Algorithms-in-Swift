@@ -17,6 +17,11 @@ func gcd(a: Int, b: Int) -> Int {
     return x
 }
 
+let x = 75, y = 100
+let result = gcd(a: 75, b: 100)
+print("\(x) 和 \(y) 的最大公约数是 \(result)")
+
+
 //  循环
 func gcdLoop(a: Int, b: Int) -> Int {
     var x = a, y = b
