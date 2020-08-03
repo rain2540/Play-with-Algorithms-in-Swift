@@ -1,11 +1,11 @@
-# Swift 100 Examples
+# Swift 100 Questions
 
 100个 Swift Demo
 
-Example 00.
+Question 00.
 有1、2、3、4个数字，能组成多少个互不相同且无重复数字的三位数？都是多少？
 
-Example 01.
+Question 01.
 企业发放的奖金根据利润提成。
 
 利润(I)低于或等于10万元时，奖金可提10%；
